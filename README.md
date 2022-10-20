@@ -2,7 +2,7 @@
 dep-value-hook是一个用来解决数据依赖关系的库。当你想让一个变量依赖另一个变量，并且在变量改变时做一些额外的事情，那么就可以使用该库。
 
 # Usage
-```react
+```js
 // index.js
 import { DepValueProvider } from "dep-value-hook";
 
@@ -32,7 +32,7 @@ function Form() {
     name: "fieldB",
     prevDepName: "filedB",
     nextDepName: "filedC",
-    effect: async (value) => {
+    effect: (value) => {
       // ...
     },
   });
@@ -41,7 +41,7 @@ function Form() {
     defaultValue: "",
     name: "fieldC",
     prevDepName: "filedC",
-    effect: async (value) => {
+    effect: (value) => {
       // ... 
     },
   });
